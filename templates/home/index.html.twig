@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Bienvenue sur la boutique !{% endblock %}
+
+{% block body %}
+
+	<section id="listProducts">
+		<div class="row">
+
+				<ul class="list-group">
+					{% for product in products %}
+					<li class="list-group-item list-group-item-dark">{{ product.name }}</li>
+					<a href="{{ path('show_product', {'id': product.id}) }}" class="btn btn-primary">Voir la fiche</a>
+					{% endfor %}
+				</ul>
+
+		</div>
+	</section>
+
+{% endblock %}

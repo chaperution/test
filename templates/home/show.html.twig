@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+
+{% block body %}
+
+	<section id="product">
+		<div class="row">
+			<a href="{{ path('home') }}" class="btn btn-primary">Retour vers la liste des produits</a>
+			<div class="col-lg-12">
+				<h3>{{ product.name }}</h3>
+			</div>
+			<div class="col-lg-12">
+				<div class="description">{{ product.description }}</div>
+			</div>
+			<div class="col-lg-12">
+				<div class="price">{{ product.price }} €</div>
+			</div>
+			<a href="#" class="btn btn-primary">Ajouter au panier</a>
+		</div>
+	</section>
+
+{% endblock %}
